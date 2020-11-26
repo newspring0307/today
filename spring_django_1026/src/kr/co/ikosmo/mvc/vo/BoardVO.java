@@ -1,5 +1,7 @@
 package kr.co.ikosmo.mvc.vo;
 
+import java.util.Date;
+
 public class BoardVO {
 /*	NO      NOT NULL NUMBER        
 	PWD              VARCHAR2(10)  
@@ -12,7 +14,7 @@ public class BoardVO {
 	private String writer;
 	private String subject;
 	private String content;
-	private String regdate;
+	private Date regdate;
 	
 	public int getNo() {
 		return no;
@@ -44,10 +46,16 @@ public class BoardVO {
 	public void setContent(String content) {
 		this.content = content;
 	}
-	public String getRegdate() {
+	public Date getRegdate() {
 		return regdate;
 	}
-	public void setRegdate(String regdate) {
+	public void setRegdate(Date regdate) {
 		this.regdate = regdate;
 	}
+	@Override
+	public String toString() {
+		return "BoardVO [no=" + no + ", subject=" + subject + ", writer=" + writer + ", content=" + content + ", regDate="
+				+ regdate + "]";
+	}
+
 }
